@@ -1,0 +1,228 @@
+.container-fluid{
+    display: flex;
+    flex-direction: column;
+    
+    background: #F7F7F7;
+    height: 100%;
+    margin-top: 20px;
+       
+}
+
+.container-fluid .page-header{
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+   // background: red;
+}
+.container-fluid .page-title{
+    font-size: 15px;
+    font-weight: 700;
+    color: #656565;
+}
+.container-fluid .page-description{
+    font-size: 13px;
+    color: #656565;
+}
+.container-fluid .create-project{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+    background:#fff;
+    width: 90%;
+    margin-left: 30px;
+    border-radius: 10px;
+   
+}   
+.list-models{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap:30px;
+   
+    width: 70%;
+}
+
+
+.card-add-user , .card-user-model{
+    width: 150px;
+    height: 150px;
+    
+    border-radius: 8px;
+    
+}
+.card-user-model{
+    box-shadow: 0px 0px 4px 0px #8888886e;;
+}
+.card-add-user{
+    background: linear-gradient(0deg, #6C8FD7, #ABC1EE );
+    border: none;
+}
+.add-user-card .create-user-label{
+font-size: 13px;
+font-weight: 700;
+color: #656565;
+}
+.card-add-user .card-body .add-user-icon{
+    
+    color: #fff;
+    font-size: 40px;
+}
+.card-add-user .card-body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    color: #656565;
+    width: 90%;
+    transform: translateX(30px);
+}
+
+.seperation-line{
+    
+    width: 150px;
+    color: #2b1d1d;
+    transform: rotate(90deg) translateX(110px) translateY(60px);
+    
+}
+.recent-users{
+    //background: red;
+    width: 90%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+.recent-users .user-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+   
+
+}
+.recent-users .header>span{
+    font-size: 15px;
+    font-weight: 700;
+    color: #656565;
+}
+.recent-users .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.create-project-form{
+    background: #fff;
+    border-radius: 10px;
+    width: 90%;
+}
+.form-group{
+    width: 25%;
+}
+.form-group>label{
+    font-size: 15px;
+    color: #656565;
+}
+.form-group>input{
+    border-radius: 8px;
+}
+.line-form{
+    width: 98%;
+}
+.start{
+    width: 90px;
+}
+.create-project-res{
+    display: none;
+}
+@media all and (max-width:782px){
+    .container-fluid .create-project {
+      display: none;
+  }
+  .container-fluid .page-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+   // background: red;
+}
+.container-fluid .page-title{
+    font-size: 35px;
+    font-weight: 700;
+    color: #656565;
+}
+
+.container-fluid .page-description,.recent-users .header >span {
+    font-size: 28px;
+    color: #656565;
+}
+    .create-project-form>form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .create-project-form>form .form-group {
+        width: 80%;
+    }
+    .create-project-form>form .form-group input,select {
+        height:  80px;
+    }
+    .create-project-form form .form-group >label{
+        font-size: 25px;
+    }
+    .create-project-res{
+        width: 85%;
+    }
+    .create-project-res>form{
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    
+    }
+    .create-project-res form .form-group{
+        width: 80%;
+        //background: red;height: 100px;
+    }
+    .create-project-res form .form-group select{
+    height: 80px;
+    }
+    .create-project-res form .form-group >label{
+        font-size: 25px;
+    }
+    .start{
+        margin-top: 10px;
+        width: 80%;
+        height: 60px;
+    }
+    .start >span{
+        font-size: 30px;
+    }
+    .create-project-res{
+        display: block;
+    }
+    .recent-users{
+        justify-content: center;
+        align-items: center;
+    }
+    .recent-users .header>button{
+        display: none;
+    }
+    .recent-users .user-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        gap: 20px;
+       
+    
+    }
+}

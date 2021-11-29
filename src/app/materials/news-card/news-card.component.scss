@@ -1,0 +1,31 @@
+
+.list-user-item{
+    position: relative;
+    width: 220px;
+    height: 240px;
+    border-radius: 8px;
+    //margin-right: 18px;
+}
+.card-img-top{
+    border-radius: 5px 5px 0 0;
+}
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #909090;
+    font-size: 13px;
+    //background: red;
+}
+@media all and (max-width:782px){
+    .list-user-item{
+        position: relative;
+        width: 320px;
+        height: 340px;
+        border-radius: 8px;
+        //margin-right: 18px;
+    }
+    .card-text{
+        font-size: 20px;
+    }
+}

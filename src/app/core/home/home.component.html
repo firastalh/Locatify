@@ -1,0 +1,63 @@
+
+    <div class="container-fluid">
+        <div class="row page-header">
+        <h5 class="page-title">Home</h5>
+        <p class="page-description">this is the home page </p>
+    </div>
+    <div class="row cards-content ml-3 ">
+        <div class="add-user-card mr-2">
+            <div class="card card-add-user" routerLink='/add_project'>
+                
+                <div class="card-body">
+                    <span class="material-icons-outlined add-user-icon">
+                        add
+                    </span>
+                    <span class="icon-label">New project</span>
+                </div>
+            </div>
+        </div>
+        <div class="list-users-cards ">
+            <div class="list-users-cards-header">
+                <span>Recent Users</span>
+                <div class="add-user-res">
+                    <span class="material-icons add_user" routerLink='/add_project'>
+                        person_add_alt
+                        </span>
+                </div>
+            </div>
+            <div class="list-users">
+               
+                
+                    <app-user-card *ngFor="let user of usersList" [userName]="user.name" [tickEnabled]="user.id<20?true:false"></app-user-card>
+            
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="row news-tutorial-content ml-3 mr-3 mt-4">
+        <div class="col-lg-8 col-sm-12 news-content ">
+            <div class="row news-header mt-2">
+                <span>News</span>
+                <p class="news-description">be update of the app world</p>
+            </div>
+            <div class="news-cards mb-5">
+                <app-news-card *ngFor="let new of todoList" [newsTitle]="new.title"></app-news-card>
+                
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12 tutorial-content mb-5">
+            <div class="row tutorial-header mt-2 ml-2">
+                <span>Tutorials</span>
+                <p class="tutorial-description">discover how to use the cms</p>
+            </div>
+            <div class="row tutorial-videos ml-2">
+                <iframe class="video" width="350" height="250"  src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+                </iframe>
+                <iframe class="video" width="350" height="250" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+

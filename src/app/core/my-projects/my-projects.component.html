@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row page-header mb-2">
+        <h5 class="page-title">My Project</h5>
+        <p class="page-description">Be upadate of the app word</p>
+    </div>
+    <div class="row my-project-table">
+        <div class="row table-pagination">
+            <span class="pagination-item " (click)="setActivated(0)">All Projects<hr *ngIf="activatePagination[0]" class="item-border"></span>
+            <span class="pagination-item" (click)="setActivated(1)">Outdoor Tours<hr  *ngIf="activatePagination[1]" class="item-border"></span>
+            <span class="pagination-item" (click)="setActivated(2)">Treasure Hunt Game <hr *ngIf="activatePagination[2]"class="item-border"></span>
+            <span class="pagination-item" (click)="setActivated(3)">Indoor Tours & Games <hr *ngIf="activatePagination[3]" class="item-border"></span>
+            <hr>
+            <div class="filter">
+                <form action="">
+                    <div class="form-group ">
+                        <input type="text" class="form-control filter-input" placeholder="Filter by Author">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row table-content">
+            <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col" ><div class="form-check" style="margin-bottom:18px">
+                        <input type="checkbox" class="form-check-input" >
+                        
+                      </div></th>
+                    
+                    <th scope="col" class="th-style">Author</th>
+                    <th scope="col" class="th-style">Date</th>
+                    <th scope="col" class="th-style">Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let book of booksList">
+                    <th scope="row"><div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        
+                      </div></th>
+                    <td class="th-style">{{book.author}}</td>
+                    <td class="th-style">{{book.date}}</td>
+                    <td class="th-style">{{book.time}}</td>
+                  </tr>
+                 
+                
+                </tbody>
+              </table>
+        </div>
+    </div>  
+</div>

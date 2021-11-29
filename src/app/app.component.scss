@@ -1,0 +1,58 @@
+@media all  {
+.fluid-container{
+   position: relative;
+   display: flex;
+   flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.sidebar-container{
+    position: fixed;
+  width: 65px;
+height: 100%;
+transition: width ease 0.8s;
+//background:gray;
+
+}
+.router-container{
+    position:relative;
+    left:65px;
+    background: #F7F7F7;;
+    height: 100%;
+    width: calc(100% - 65px);
+    transition: all ease 0.8s;
+}
+
+
+}
+@media all and (max-width: 782px) {
+    .fluid-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+       // background: red;
+    }
+    .fluid-container .sidebar-container{
+       bottom: 0px;
+       width: 80%;
+        height: 65px;
+       z-index: 1;
+        
+       // background: yellow;
+        
+    }
+    .fluid-container .router-container{
+        position:relative;
+        left: 0;
+        
+        background: #F7F7F7;;
+        //height: calc(100% - 65px);
+        width: 100%;
+        transition: all ease 0.8s;
+    }
+    
+  }

@@ -1,0 +1,119 @@
+.container-fluid{
+    display: flex;
+    flex-direction: column;
+    
+    background: #F7F7F7;
+    height: 100%;
+    margin-top: 20px;
+       
+}
+
+.container-fluid .page-header{
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+   // background: red;
+}
+.container-fluid .page-title{
+    font-size: 15px;
+    font-weight: 700;
+    color: #656565;
+}
+.container-fluid .page-description{
+    font-size: 13px;
+    color: #656565;
+}
+.container-fluid .my-project-table{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    width: 95%;
+}
+.container-fluid .my-project-table .filter{
+    position: absolute;
+    right: 0;
+    top:-10px;
+    width: 10%;
+}
+.container-fluid .my-project-table .filter .filter-input{
+    height: 30px;
+    
+}
+.container-fluid .my-project-table .filter .filter-input::placeholder{
+    font-size: 13px;
+    color: #6565657e;
+   
+}
+.container-fluid .my-project-table .table-pagination{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    
+}
+.container-fluid .my-project-table .table-pagination hr{
+    width: 100%;
+    margin-top: -18px;
+    color: #656565;
+}
+.pagination-item{
+    position: relative;
+    font-size: 13px;
+    color: #65656585;
+    font-weight: 700;
+}
+.item-border{
+    position: absolute;
+   
+    background: rgb(191, 141, 238);
+    height:  2px;
+    border-radius: 35px;
+    transform: translateY(24px);
+}
+.table {
+    width: 70%;
+}
+.table tbody > tr{
+    background: #fff;
+   
+   
+}
+.table{
+    border-collapse: separate;
+    border-spacing:0 8px;
+}
+.table .th-style{
+    font-size: 12px;
+    
+    color: #656565;
+}
+.form-check{
+    margin-top: 5px;
+}
+
+@media all and (max-width:782px){
+    .table {
+        width: 95%;
+    }
+    .container-fluid .page-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 16px;
+       
+       // background: red;
+    }
+    .container-fluid .page-title{
+        font-size: 35px;
+        font-weight: 700;
+        color: #656565;
+    }
+    .container-fluid .page-description{
+        font-size: 28px;
+        color: #656565;
+    }
+    .my-project-table{
+        margin-top: 50px;
+    }
+}
