@@ -11,9 +11,9 @@
             <span class="pagination-item" (click)="setActivated(3)">Indoor Tours & Games <hr *ngIf="activatePagination[3]" class="item-border"></span>
             <hr>
             <div class="filter">
-                <form action="">
+                <form action="" [formGroup]="filterForm">
                     <div class="form-group ">
-                        <input type="text" class="form-control filter-input" placeholder="Filter by Author">
+                        <input type="text" class="form-control filter-input" placeholder="Filter by Author" formControlName="filter" (keydown.enter)="filterItems()">
                     </div>
                 </form>
             </div>
@@ -23,7 +23,9 @@
                 <thead>
                   <tr>
                     <th scope="col" ><div class="form-check" style="margin-bottom:18px">
-                        <input type="checkbox" class="form-check-input" >
+                   
+                        <input type="checkbox" class="form-check-input"   >
+                     
                         
                       </div></th>
                     
@@ -33,7 +35,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let book of booksList">
+                  <tr *ngFor="let book of filteredList">
                     <th scope="row"><div class="form-check">
                         <input type="checkbox" class="form-check-input">
                         
