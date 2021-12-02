@@ -4,13 +4,14 @@
 }
 .list-user-item{
     position: relative;
-    height: 135px;
-    width: 120px;
+    height: 130px;
+    width: 110px;
     border-radius: 8px;
     //margin-right: 18px;
 }
 .card-img-top{
     border-radius: 5px  5px  0 0px;
+    height: 63%;
 }
 
 .card-body{
@@ -27,6 +28,10 @@
     top:3px;
     color: #6A8ED3;
     display: block;
+}
+.card-text{
+    font-size: 12px;
+    text-align: center;
 }
 
 @media all and (max-width:782px){
