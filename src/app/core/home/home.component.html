@@ -20,7 +20,7 @@
             <div class="list-users-cards-header mt-1">
                 <span>Recent Users</span>
                 <div class="pagination-cibles">
-                    <span *ngFor="let index of numberPages" (click)="changePage(index)" [class.index-active]="activePage[index-1]">{{index}}</span>
+                    <span *ngFor="let index of numberPages" (click)="changeUserPage(index)" style="cursor: pointer;" [class.index-active]="userActivePage[index-1]">{{index}}</span>
                 </div>
                 <div class="add-user-res">
                     <span class="material-icons add_user" routerLink='/add_project'>
@@ -41,11 +41,15 @@
     <div class="row news-tutorial-content ml-3 mr-3 mt-4">
         <div class="col-lg-8 col-sm-12 news-content ">
             <div class="row news-header mt-2">
+                
                 <span>News</span>
                 <p class="news-description">be update of the app world</p>
+                <div class="pagination-news-cibles">
+                    <span *ngFor="let index of newsNumberPages" (click)="changeNewsPage(index)" style="cursor: pointer;" [class.index-active]="newsactivePage[index-1]">{{index}}</span>
+                </div>
             </div>
             <div class="news-cards mb-5">
-                <app-news-card *ngFor="let new of todoList" [newsTitle]="new.title"></app-news-card>
+                <app-news-card *ngFor="let new of newsListPage" [newsTitle]="new.title"></app-news-card>
                 
             </div>
         </div>
