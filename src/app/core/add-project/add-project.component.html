@@ -120,7 +120,7 @@
                       Female
                     </label>
                   </div>
-                  <div *ngIf="userForm.controls['gender'].invalid&&(userForm.controls['gender'].dirty||userForm.controls['gender'].touched)"><p class="validator">please Insert a Status</p></div>
+                  <div *ngIf="userForm.controls['gender'].invalid&&(userForm.controls['gender'].dirty||userForm.controls['gender'].touched)"><p class="validator">please Insert a Gender</p></div>
             </div>
             <button type="button" class="btn btn-primary start" [disabled]="(userForm.controls['gender'].invalid)||(userForm.controls['name'].invalid)||(userForm.controls['status'].invalid)"> <span style="font-weight: 700;" (click)="addUser(userForm)">Start</span> </button>
 
