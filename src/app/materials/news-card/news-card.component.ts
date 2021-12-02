@@ -6,10 +6,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./news-card.component.scss']
 })
 export class NewsCardComponent implements OnInit {
-@Input('newsTitle') newsTitle:string;
+@Input('newsAuthor') newsAuthor:string;
+@Input('imageUrl') imageUrl:string;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.imageUrl)
   }
 
 }

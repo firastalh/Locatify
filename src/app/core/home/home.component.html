@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="news-cards mb-5" #newsCardRef>
-                <app-news-card *ngFor="let new of newsListPage" [newsTitle]="new.title"></app-news-card>
+                <app-news-card *ngFor="let new of newsListPage" [newsAuthor]="new.author" [imageUrl]="new['imageUrl']"></app-news-card>
                 
             </div>
         </div>
@@ -59,10 +59,9 @@
                 <p class="tutorial-description">discover how to use the cms</p>
             </div>
             <div class="row tutorial-videos ml-2">
-                <!-- <iframe class="video" width="350" height="250"  src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
-                </iframe>
-                <iframe class="video" width="350" height="250" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
-                </iframe> -->
+                <iframe class="video" width="350" height="250"  src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+                </iframe> 
+                
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpServiceService } from 'src/app/services/http-service.service';
 import { updateFunctionDeclaration } from 'typescript';
 @Component({
@@ -16,9 +16,9 @@ usersListPage=[]
 
   ngOnInit(): void {
     this.userForm=new FormGroup({
-      name:new FormControl(),
-      status:new FormControl(),
-      gender:new FormControl()
+      name:new FormControl('',Validators.required),
+      status:new FormControl('',Validators.required),
+      gender:new FormControl('',Validators.required)
     })
     this._httpServiceService.getUsers().subscribe(listUsers=>{
       this.usersList=listUsers['data'];

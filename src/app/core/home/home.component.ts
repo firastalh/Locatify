@@ -24,10 +24,12 @@ numberPages=[];
   ngOnInit(): void {
     this._httpServiceService.getUsers().subscribe(res=>{
       this.usersList=res['data']
+      
       this.initializeUserPages()
     })
     this._httpServiceService.getTodo().subscribe(res=>{
       this.newsList=res['data']
+      console.log('r',this.newsList)
       this.newsList.filter(el=>el.status=='completed')
       this.initializeNewsPages()
     })

@@ -39,7 +39,7 @@ import { AddProjectUserCardComponent } from './materials/add-project-user-card/a
    
     
   ],
-  providers: [],
+  providers: [{provide:'accessToken',useValue:'34caf4219b17e443c5c735df110c980c7531b9d32af7d6fb68acfaad613345ab'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -141,6 +141,12 @@ color: #656565;
 .create-project-res{
     display: none;
 }
+.validator{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 13px;
+    color: red;
+}
 @media all and (max-width:782px){
     .container-fluid .create-project {
       display: none;
