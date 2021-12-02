@@ -57,6 +57,10 @@
     background: linear-gradient(0deg, #6C8FD7, #ABC1EE );
     border: none;
 }
+
+.card-add-user:active{
+    box-shadow: inset  1px 1px 20px rgba(122, 99, 99, 0.445);
+}
 .add-user-card .create-user-label{
 font-size: 13px;
 font-weight: 700;
