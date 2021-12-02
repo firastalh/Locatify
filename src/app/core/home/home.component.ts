@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { HttpServiceService } from 'src/app/services/http-service.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('listUsersRef') listUsersRef:ElementRef;
+  @ViewChild('newsCardRef') newsCardRef:ElementRef;
 usersList=[]
 usersListPage=[]
 userActivePage=[]
@@ -17,7 +19,7 @@ numberOfUserPages:number;
 numberOfNewsPages:number
 newsNumberPages=[]
 numberPages=[];
-  constructor(private _httpServiceService:HttpServiceService) { }
+  constructor(private _httpServiceService:HttpServiceService,private _rendrer:Renderer2) { }
 
   ngOnInit(): void {
     this._httpServiceService.getUsers().subscribe(res=>{
@@ -31,12 +33,18 @@ numberPages=[];
     })
   }
   changeUserPage(index){
+    
     let firstItem=(index-1)*6;
     this.usersListPage=this.usersList.slice(firstItem,index*6)
     this.userActivePage.fill(false)
     this.userActivePage[index-1]=true
+    this._rendrer.setStyle(this.listUsersRef.nativeElement,'animation','fade .6s alternate')
+    setTimeout(()=>{
+      this._rendrer.removeStyle(this.listUsersRef.nativeElement,'animation')
+    },600)
     console.log( this.userActivePage)
     console.log('index',index)
+    
   }
   initializeUserPages(){
     this.usersListPage=Object.assign(this.usersList.slice(0,6));
@@ -90,10 +98,16 @@ initializeUserPageArray(){
 }
 
 changeNewsPage(index){
+  
   let firstItem=(index-1)*3;
   this.newsListPage=this.newsList.slice(firstItem,index*3)
   this.newsactivePage.fill(false)
   this.newsactivePage[index-1]=true
+  
+  this._rendrer.setStyle(this.newsCardRef.nativeElement,'animation','fade .6s alternate')
+    setTimeout(()=>{
+      this._rendrer.removeStyle(this.newsCardRef.nativeElement,'animation')
+    },600)
   console.log( this.newsactivePage)
   console.log('index',index)
 }

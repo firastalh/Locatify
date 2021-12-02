@@ -28,7 +28,7 @@
                         </span>
                 </div>
             </div>
-            <div class="list-users ">
+            <div class="list-users " #listUsersRef>
                
                 
                     <app-user-card *ngFor="let user of usersListPage" [userName]="user.name" [tickEnabled]="user.id<20?true:false"></app-user-card>
@@ -48,7 +48,7 @@
                     <span *ngFor="let index of newsNumberPages" (click)="changeNewsPage(index)" style="cursor: pointer;" [class.index-active]="newsactivePage[index-1]">{{index}}</span>
                 </div>
             </div>
-            <div class="news-cards mb-5">
+            <div class="news-cards mb-5" #newsCardRef>
                 <app-news-card *ngFor="let new of newsListPage" [newsTitle]="new.title"></app-news-card>
                 
             </div>
