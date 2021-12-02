@@ -19,16 +19,19 @@
         <div class="list-users-cards ml-1">
             <div class="list-users-cards-header mt-1">
                 <span>Recent Users</span>
+                <div class="pagination-cibles">
+                    <span *ngFor="let index of numberPages" (click)="changePage(index)" [class.index-active]="activePage[index-1]">{{index}}</span>
+                </div>
                 <div class="add-user-res">
                     <span class="material-icons add_user" routerLink='/add_project'>
                         person_add_alt
                         </span>
                 </div>
             </div>
-            <div class="list-users mt-1">
+            <div class="list-users ">
                
                 
-                    <app-user-card *ngFor="let user of usersList.slice(0,5)" [userName]="user.name" [tickEnabled]="user.id<20?true:false"></app-user-card>
+                    <app-user-card *ngFor="let user of usersListPage" [userName]="user.name" [tickEnabled]="user.id<20?true:false"></app-user-card>
             
             </div>
             
