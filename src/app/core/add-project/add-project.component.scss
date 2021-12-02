@@ -28,7 +28,7 @@
    flex-direction: row;
    flex-wrap: nowrap;
     background:#fff;
-    width: 90%;
+    width: 95%;
     margin-left: 30px;
     border-radius: 10px;
    
@@ -92,16 +92,17 @@ color: #656565;
 }
 .recent-users{
     //background: red;
-    width: 90%;
+    width: 95%;
     margin-left: 30px;
     display: flex;
     flex-direction: column;
-    gap:20px
+    gap:20px;
+   // background:red;
 }
 .recent-users .user-list{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 20px;
    
 

@@ -10,6 +10,8 @@ import { updateFunctionDeclaration } from 'typescript';
 export class AddProjectComponent implements OnInit {
  userForm
  nextStep=false;
+ usersList=[]
+usersListPage=[]
   constructor(private _httpServiceService:HttpServiceService) { }
 
   ngOnInit(): void {
@@ -17,6 +19,12 @@ export class AddProjectComponent implements OnInit {
       name:new FormControl(),
       status:new FormControl(),
       gender:new FormControl()
+    })
+    this._httpServiceService.getUsers().subscribe(listUsers=>{
+      this.usersList=listUsers['data'];
+      this.usersListPage=this.usersList.slice(0,6);
+      console.log('++',this.usersList)
+    
     })
   }
   createUser(){
@@ -31,5 +39,8 @@ export class AddProjectComponent implements OnInit {
     
     console.log(user.value)
     
+  }
+  seeAll(){
+    this.usersListPage=Object.assign(this.usersList)
   }
 }

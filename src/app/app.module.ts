@@ -15,6 +15,7 @@ import { MyProjectsComponent } from './core/my-projects/my-projects.component';
 import { PaginationActionDirective } from './directives/pagination-action.directive';
 import {HttpClientModule}from '@angular/common/http'
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { AddProjectUserCardComponent } from './materials/add-project-user-card/add-project-user-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     UserCardComponent,
     NewsCardComponent,
     MyProjectsComponent,
-    PaginationActionDirective
+    PaginationActionDirective,
+    AddProjectUserCardComponent
   ],
   imports: [
     BrowserModule,

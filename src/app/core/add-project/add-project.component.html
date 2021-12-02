@@ -76,14 +76,10 @@
     <div class="row mt-1 mb-5 recent-users">
         <div class="header">
             <span>Recent Users</span>
-            <button class="btn btn-outline-primary see-all">See All</button>
+            <button class="btn btn-outline-primary see-all" (click)="seeAll()">See All</button>
         </div>
         <div class="user-list">
-
-            <app-user-card [userName]="'abdou alah'" [tickEnabled]="false"></app-user-card>
-            <app-user-card [userName]="'abdou alah'" [tickEnabled]="false"></app-user-card>
-            <app-user-card [userName]="'abdou alah'" [tickEnabled]="false"></app-user-card>
-            <app-user-card [userName]="'abdou alah'" [tickEnabled]="false"></app-user-card>
+            <app-add-project-user-card *ngFor="let user of usersListPage"[userName]="'abdou alah'"></app-add-project-user-card>
             
             
         </div>
